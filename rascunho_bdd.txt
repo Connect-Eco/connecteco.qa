@@ -1,16 +1,3 @@
-Logo
-
-
-Feature: Exibição do logo no Connect Eco
-
-  Scenario: Logo é exibido no canto superior esquerdo
-    Given que acesso o Connect Eco
-    Then o logo deve ser exibido no canto superior esquerdo
-
-  Scenario: Verificar se o logo não é clicável
-    Given que o logo está exibido
-    Then o logo não deve ser clicável
-Cabeçalho
 
 
 Feature: Exibição do cabeçalho no Connect Eco
@@ -19,20 +6,23 @@ Feature: Exibição do cabeçalho no Connect Eco
     Given que acesso o Connect Eco
     Then o cabeçalho deve ser exibido
 
-  Scenario: A opção "Home" aparece no cabeçalho
+  Scenario: A opção "Home" é clicável e leva para url: /home
     Given que o cabeçalho está exibido
-    Then a opção "Home" deve aparecer no cabeçalho
+    When clicar na opção "Home"
+    Then deve carregar a tela de "Home' com url: ***/home
 
-  Scenario: A opção "Sobre a Connect Eco" aparece no cabeçalho
+  Scenario: A opção "Sobre a Connect Eco"  é clicável e leva para url: /about
     Given que o cabeçalho está exibido
-    Then a opção "Sobre a Connect Eco" deve aparecer no cabeçalho
-    But o texto está incorreto, deve ser "Sobre a Connect Eco"
+    When clicar na opção "Sobre a Connect Eco"
+    Then deve carregar a tela de "Sobre a Connect Eco" com url: ***/about
 
-  Scenario: A opção "Blog" aparece no cabeçalho
+
+  Scenario: A opção "Blog"  é clicável e leva para url: /blog
     Given que o cabeçalho está exibido
-    Then a opção "Blog" deve aparecer no cabeçalho
+    When clicar na opção "Blog"
+    Then deve carregar a tela de "Blog" com url: ***/blog
 
-  Scenario: Texto da opção selecionada está na cor verde-escuro
+  Scenario: Texto da opção selecionada fica destacado
     Given que uma opção do cabeçalho está selecionada
     Then o texto da opção selecionada deve estar na cor verde-escuro
 
@@ -40,9 +30,10 @@ Feature: Exibição do cabeçalho no Connect Eco
     Given que o cabeçalho está exibido
     Then o texto das opções não selecionadas deve estar na cor cinza
 
-  Scenario: Botão "Faça parte" é exibido corretamente
+  Scenario: Botão "Faça parte"  é clicável e leva para url: 
     Given que o cabeçalho está exibido
-    Then o botão "Faça parte" deve ser exibido com fundo verde e texto branco
+    When clicar na opção "Faça parte"
+    Then deve carregar a tela de "Faça parte"
 
   Scenario: Localização atual é exibida corretamente
     Given que o cabeçalho está exibido
@@ -52,6 +43,7 @@ Feature: Exibição do cabeçalho no Connect Eco
     Given que a localização atual está exibida
     When clico na localização atual
     Then o pop-up de endereço deve ser exibido
+
 Pop-up de Endereço
 
 
@@ -65,11 +57,6 @@ Feature: Pop-up de endereço no Connect Eco
     Given que não é o primeiro acesso do usuário em um novo dispositivo/navegador
     Then o pop-up de endereço não deve ser exibido
 
-  Scenario: Exibição do pop-up de endereço ao clicar em "Endereço"
-    Given que acesso o Connect Eco
-    When clico em "Endereço"
-    Then o pop-up de endereço deve ser exibido
-
   Scenario: Mensagem no pop-up de endereço
     Given que o pop-up de endereço está exibido
     Then a mensagem "Em qual cidade do Brasil você gostaria de fazer seu descarte?" deve ser exibida na cor verde
@@ -78,66 +65,54 @@ Feature: Pop-up de endereço no Connect Eco
     Given que o pop-up de endereço está exibido
     Then deve haver três opções de entrada: Estado, Cidade e Bairro, e o botão "Confirmar"
 
-  Scenario: Exibição do texto "Qual estado?" no pop-up de endereço
-    Given que o pop-up de endereço está exibido
-    Then a opção "Qual estado?" deve estar escrita na cor cinza com o sinal "*" em vermelho
-
   Scenario: Seleção obrigatória do estado
     Given que o pop-up de endereço está exibido
-    Then a opção para selecionar "Qual estado?" deve ser obrigatória
-
-  Scenario: Caixa de seleção abaixo da opção "Qual estado?"
-    Given que o pop-up de endereço está exibido
-    Then deve haver uma caixa de seleção abaixo da opção "Qual estado? *"
+    Then a opção para selecionar "Qual estado?" deve ser obrigatória e indicada com o sinal "*" em vermelho
+    Then o botão "Confirmar" deve estar inativo 
 
   Scenario: Validação do campo "Qual estado?"
     Given que o pop-up de endereço está exibido
-    Then deve ser impossível preencher o campo "Qual estado?" com um estado que não existe
+    Then deve ser possível preencher o campo "Qual estado?" com um estado da lista
+
+  Scenario: Não é possível inserir um estado que não está na lista
+    Given que o pop-up de endereço está exibido
+    When tentar inserir um novo estado
+    Then deve ser impossível preencher o campo "Qual estado?" com um estado que não esta na lista
 
   Scenario: Exibição das cidades correspondentes ao estado selecionado
     Given que um estado foi selecionado
     Then apenas as cidades do estado correspondente devem ser exibidas
 
-  Scenario: Exibição do texto "Qual cidade?" no pop-up de endereço
-    Given que o pop-up de endereço está exibido
-    Then a opção "Qual cidade?" deve estar escrita na cor cinza com o sinal "*" em vermelho
-
   Scenario: Seleção obrigatória da cidade
     Given que o pop-up de endereço está exibido
-    Then a opção para selecionar "Qual cidade?" deve ser obrigatória
-
-  Scenario: Caixa de seleção abaixo da opção "Qual cidade?"
-    Given que o pop-up de endereço está exibido
-    Then deve haver uma caixa de seleção abaixo da opção "Qual cidade? *"
+    Then a opção para selecionar "Qual cidade?" deve ser obrigatória e indicada com o sinal "*" em vermelho
+    Then o botão "Confirmar" deve estar inativo 
 
   Scenario: Validação do campo "Qual cidade?"
-    Given que o pop-up de endereço está exibido
-    Then deve ser impossível preencher o campo "Qual cidade?" com uma cidade que não existe
+    Given que um estado foi selecionado
+    Then deve ser possível preencher o campo "Qual cidade?" com uma cidade da lista
+
+  Scenario: Não é possível inserir uma cidade que não está na lista
+    Given que um estado foi selecionado
+    When tentar inserir uma nova cidade
+    Then deve ser impossível preencher o campo "Qual cidade?" com uma cidade que não está na lista
 
   Scenario: Exibição dos bairros correspondentes à cidade selecionada
     Given que uma cidade foi selecionada
     Then apenas os bairros da cidade correspondente devem ser exibidos
 
-  Scenario: Exibição do texto "Qual bairro?" no pop-up de endereço
-    Given que o pop-up de endereço está exibido
-    Then a opção "Qual bairro?" deve estar escrita na cor cinza
-    But o texto está incorreto, deve ser com letra minúscula
-
   Scenario: Seleção opcional do bairro
     Given que o pop-up de endereço está exibido
     Then a opção para selecionar "Qual bairro?" deve ser opcional
 
-  Scenario: Caixa de seleção abaixo da opção "Qual bairro?"
-    Given que o pop-up de endereço está exibido
-    Then deve haver uma caixa de seleção abaixo da opção "Qual bairro?"
-
   Scenario: Validação do campo "Qual bairro?"
-    Given que o pop-up de endereço está exibido
-    Then deve ser impossível preencher o campo "Qual bairro?" com um bairro que não existe
+    Given que uma cidade foi selecionada
+    Then deve ser possível preencher o campo "Qual bairro?" com um bairro da lista
 
-  Scenario: Botão "Confirmar" no pop-up de endereço
-    Given que o pop-up de endereço está exibido
-    Then o botão "Confirmar" deve aparecer abaixo da caixa de seleção da opção "Qual bairro?" e deve ter a cor verde com o texto em branco
+  Scenario: Não é possível inserir um bairro que não está na lista
+    Given que uma cidade foi selecionada
+    When tentar inserir um novo bairro
+    Then deve ser impossível preencher o campo "Qual bairros?" com um bairro que não está na lista
 
   Scenario: Ativação do botão "Confirmar" com campos obrigatórios preenchidos
     Given que os campos obrigatórios "estado" e "cidade" estão preenchidos
@@ -151,19 +126,7 @@ Feature: Pop-up de endereço no Connect Eco
     Given que os campos obrigatórios "estado" e "cidade" estão preenchidos e o campo "bairro" está vazio
     Then o botão "Confirmar" deve ficar ativo
 
-  Scenario: Impossibilidade de filtrar endereços sem selecionar estado
-    Given que o estado não está selecionado
-    Then deve ser impossível filtrar os endereços
-
-  Scenario: Impossibilidade de filtrar endereços sem selecionar cidade
-    Given que a cidade não está selecionada
-    Then deve ser impossível filtrar os endereços
-
-  Scenario: Possibilidade de filtrar endereços sem selecionar bairro
-    Given que os campos obrigatórios "estado" e "cidade" estão preenchidos e o campo "bairro" está vazio
-    Then deve ser possível filtrar os endereços
 Home
-
 
 Feature: Página Home do Connect Eco
 
@@ -171,33 +134,19 @@ Feature: Página Home do Connect Eco
     Given que acesso o Connect Eco
     Then a página "Home" deve ser aberta por padrão
 
-  Scenario: Pop-up de endereço é exibido na página Home
-    Given que acesso o Connect Eco
-    Then o pop-up de endereço deve ser exibido na página Home
-
   Scenario: Elementos exibidos ao clicar em "Home"
     Given que acesso o Connect Eco
     When clico em "Home"
     Then um banner, uma lista de materiais e um campo de pesquisa de endereço devem ser exibidos
 
-  Scenario: Exibição do banner abaixo do anúncio
+  Scenario: Trocar imagem do banner 
     Given que estou na página "Home"
-    Then o banner deve ser exibido abaixo do anúncio
-
-  Scenario: Mensagem e legenda no banner
-    Given que o banner está exibido
-    Then a mensagem "Encontre pontos de reciclagem perto de você!" na cor verde, com a legenda "Para um futuro sustentável, veja onde reciclar!" na cor cinza devem ser exibidas no banner
-
-  Scenario: Imagem de pneus no banner
-    Given que o banner está exibido
-    Then uma imagem com vários pneus deve ser exibida ao lado da mensagem do banner
-
-  Scenario: Texto abaixo do banner
-    Given que o banner está exibido
-    Then o texto "Qual tipo de material você gostaria de descartar?" deve ser exibido na cor cinza abaixo do banner
+    When clico na imagem do banner e arrast para o lado
+    Then muda o banner exibido
 
   Scenario: Materiais disponíveis para descarte
-    Given que o texto "Qual tipo de material você gostaria de descartar?" está exibido
+    Given que estou na página "Home"
+    Then o texto "Qual tipo de material você gostaria de descartar?" está exibido
     Then os materiais disponíveis para descarte devem aparecer abaixo do texto
 
   Scenario: Seleção padrão de todos os materiais
@@ -245,10 +194,10 @@ Feature: Página Home do Connect Eco
     When seleciono um material
     Then deve ser possível selecionar apenas um material
 
-  Scenario: Seleção de mais de um material
+  Scenario: Não é possível selecionar de mais de um material
     Given que estou na página "Home"
     When seleciono mais de um material
-    Then deve ser possível selecionar mais de um material
+    Then deve ser impossível selecionar mais de um material
 
   Scenario: Exibição do texto "Principais Pontos de Coleta"
     Given que estou na página "Home"
@@ -258,44 +207,24 @@ Feature: Página Home do Connect Eco
     Given que estou na página "Home"
     Then um botão para selecionar o Estado deve ser exibido ao lado do texto "Principais Pontos de Coleta"
 
-  Scenario: Placeholder do botão "Estado"
-    Given que o botão "Estado" está exibido
-    Then o placeholder do botão deve conter um ícone de localização e o texto "Estado" em seguida
-
-  Scenario: Cor do botão "Estado"
-    Given que o botão "Estado" está exibido
-    Then o botão "Estado" deve ter a cor verde-escuro com o texto em verde-claro
-
   Scenario: Ação ao clicar no botão "Estado"
     Given que o botão "Estado" está exibido
     When clico no botão "Estado"
-    Then a ação correspondente deve ser executada
+    Then pop-up de endereços deve ser exibido
 
   Scenario: Exibição do botão para selecionar Cidade
     Given que estou na página "Home"
     Then um botão para selecionar a Cidade deve ser exibido ao lado do botão "Estado"
 
-  Scenario: Placeholder do botão "Cidade"
-    Given que o botão "Cidade" está exibido
-    Then o placeholder do botão deve conter um ícone de localização e o texto "Cidade" em seguida
-
-  Scenario: Cor do botão "Cidade"
-    Given que o botão "Cidade" está exibido
-    Then o botão "Cidade" deve ter a cor verde-escuro com o texto em verde-claro
-
   Scenario: Ação ao clicar no botão "Cidade"
     Given que o botão "Cidade" está exibido
     When clico no botão "Cidade"
-    Then a ação correspondente deve ser executada
-
-  Scenario: Placeholder da caixa de seleção
-    Given que a caixa de seleção está exibida
-    Then o placeholder da caixa de seleção deve conter o texto "Selecione Bairro" na cor cinza
+    Then pop-up de endereços deve ser exibido
 
   Scenario: Ação ao clicar no campo "Selecionar Bairro"
     Given que a caixa de seleção está exibida
     When clico no campo "Selecionar Bairro"
-    Then a ação correspondente deve ser executada
+    Then a lista de bairros deve aparecer na tela
 
   Scenario: Exibição de postos de coletas
     Given que estou na página "Home"
@@ -305,6 +234,7 @@ Feature: Página Home do Connect Eco
     Given que estou na página "Home"
     When clico em "Home"
     Then a página deve ser atualizada e a lista de endereços deve desaparecer
+
 Sobre a Connect Eco
 
 
@@ -402,14 +332,10 @@ Rodapé
 
 Feature: Rodapé do Connect Eco
 
-  Scenario: Exibição do ícone e texto no lado esquerdo do rodapé
-    Given que estou na página do Connect Eco
-    Then no rodapé do lado esquerdo deve ter um ícone verde de reciclagem e ao lado dele "CONNECT ECO" escrito em preto
-
   Scenario: Exibição do texto no centro do rodapé
     Given que estou na página do Connect Eco
-    Then no rodapé no centro deve estar escrito "Todos os direitos reservados" em cinza
+    Then no rodapé no centro deve estar escrito "Todos os direitos reservados"
 
   Scenario: Exibição do texto no lado direito do rodapé
     Given que estou na página do Connect Eco
-    Then no rodapé do lado direito deve estar escrito "Políticas de Privacidade" em cinza
+    Then no rodapé do lado direito deve estar escrito "Políticas de Privacidade"
