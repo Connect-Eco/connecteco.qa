@@ -1,6 +1,3 @@
-Logo
-
-
 Feature: Exibição do logo no Connect Eco
 
   Scenario: Logo é exibido no canto superior esquerdo
@@ -10,7 +7,6 @@ Feature: Exibição do logo no Connect Eco
   Scenario: Verificar se o logo não é clicável
     Given que o logo está exibido
     Then o logo não deve ser clicável
-Cabeçalho
 
 
 Feature: Exibição do cabeçalho no Connect Eco
@@ -52,7 +48,6 @@ Feature: Exibição do cabeçalho no Connect Eco
     Given que a localização atual está exibida
     When clico na localização atual
     Then o pop-up de endereço deve ser exibido
-Pop-up de Endereço
 
 
 Feature: Pop-up de endereço no Connect Eco
@@ -162,7 +157,6 @@ Feature: Pop-up de endereço no Connect Eco
   Scenario: Possibilidade de filtrar endereços sem selecionar bairro
     Given que os campos obrigatórios "estado" e "cidade" estão preenchidos e o campo "bairro" está vazio
     Then deve ser possível filtrar os endereços
-Home
 
 
 Feature: Página Home do Connect Eco
@@ -305,7 +299,6 @@ Feature: Página Home do Connect Eco
     Given que estou na página "Home"
     When clico em "Home"
     Then a página deve ser atualizada e a lista de endereços deve desaparecer
-Sobre a Connect Eco
 
 
 Feature: Página "Sobre a Connect Eco"
@@ -313,7 +306,6 @@ Feature: Página "Sobre a Connect Eco"
   Scenario: Exibição dos textos na página "Sobre a Connect Eco"
     Given que estou na página "Sobre a Connect Eco"
     Then os textos "Missão", "Visão", "Valores" e "Como nasceu" devem ser exibidos
-Blog
 
 
 Feature: Página "Blog" do Connect Eco
@@ -360,7 +352,6 @@ Feature: Página "Blog" do Connect Eco
     Given que estou na seção "Últimos posts"
     When clico no botão "Visualizar"
     Then uma nova página deve ser aberta com o título do post na parte superior e a publicação completa com a sua imagem referente no final da página
-Botão "Faça Parte"
 
 
 Feature: Página "Faça Parte"
@@ -380,7 +371,6 @@ Feature: Página "Faça Parte"
   Scenario: Exibição do formulário de registro
     Given que estou na página "Faça Parte"
     Then o "Formulário de registro" deve aparecer abaixo do texto
-Página Não Encontrada
 
 
 Feature: Página Não Encontrada
@@ -397,7 +387,6 @@ Feature: Página Não Encontrada
     Given que a mensagem "404 :(" está exibida
     When clico no botão "Voltar para página inicial"
     Then o usuário deve ser direcionado para a página "Home"
-Rodapé
 
 
 Feature: Rodapé do Connect Eco
