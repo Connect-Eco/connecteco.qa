@@ -14,5 +14,6 @@ Feature: Rodapé do Connect Eco
 
   Scenario: Texto clicável no lado direito do rodapé
       Given que estou na página do Connect Eco
-      Then no rodapé do lado direito deve ter texto "Políticas de Privacidade" em preto clicável 
-      When clicar leva a respectiva página
+      Then no rodapé do lado direito deve ter texto "Políticas de Privacidade" em preto
+      Then clicar no texto
+      When leva a respectiva página
