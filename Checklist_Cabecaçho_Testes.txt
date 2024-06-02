@@ -1,0 +1,18 @@
+Feature: Exibição do cabeçalho no Connect Eco
+
+  Scenario: Cabeçalho é exibido ao acessar o Connect Eco	PASSED
+
+  Scenario: A opção "Home" é clicável e leva para página principal	PASSED
+
+  Scenario: A opção "Sobre a Connect Eco" aparece no cabeçalho	PASSED
+
+
+  Scenario: A opção "Blog" aparece no cabeçalho	PASSED
+
+  Scenario: Texto da opção selecionada fica destacado	PASSED
+
+  Scenario: Botão "Faça parte"  é clicável	PASSED
+	
+  Scenario: Localização atual é exibida corretamente	"Não implementado ainda"
+
+  Scenario: Pop-up de endereço é exibido ao clicar na localização atual	"Não implementado ainda"
