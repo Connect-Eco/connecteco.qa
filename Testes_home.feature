@@ -11,7 +11,7 @@ Feature: Página Home do Connect Eco
 
   Scenario: Exibição de cinco banners com duração de 6 segundos cada
     Given que estou na página inicial
-    When os banners são exibidos abaixo do anúncio
+    When os banners são exibidos abaixo do cabeçalho
     Then cinco banners devem ser exibidos
     And cada banner deve ter uma duração de aproximadamente 6 segundos  
 
@@ -68,13 +68,25 @@ Feature: Página Home do Connect Eco
     Given que estou na página "Home"
     Then a opção de selecionar "Todos" os materiais deve ser escolhida por padrão
 
-  Scenario: Exibição da opção selecionada
-    Given que uma opção de material está selecionada
+  Scenario: Exibição dos materiais no desktop
+    Given que uma opção de material está selecionada no desktop
     Then a opção selecionada deve ficar com o fundo na cor verde e o texto em branco
+    And o restante das opções devem ficar com o fundo branco e o texto em preto
 
-  Scenario: Exibição das opções não selecionadas
-    Given que uma opção de material está selecionada
-    Then o restante das opções devem ficar com o fundo branco e o texto em preto
+  Scenario: Exibir materiais em uma caixa de seleção no dispositivo móvel
+    Given que estou acessando o Connect Eco em um dispositivo móvel
+    Then os materiais devem ser exibidos em uma caixa de seleção
+
+  Scenario: Material selecionado em azul na caixa de seleção
+    Given que estou acessando o Connect Eco em um dispositivo móvel
+    When abro a caixa de seleção de materiais
+    Then o material selecionado deve ficar na cor azul
+    And o restante dos materiais deve ficar na cor verde
+
+  Scenario: Material exibido em verde após seleção
+    Given que estou acessando o Connect Eco em um dispositivo móvel
+    When seleciono um material e fecho a caixa de seleção
+    Then o material selecionado deve aparecer na cor verde
 
   Scenario: Seleção de material "Plástico"
     Given que estou na página "Home"
@@ -135,16 +147,6 @@ Feature: Página Home do Connect Eco
     When seleciono um material
     Then os cards dos pontos de coleta do material selecionado devem ser exibidos automaticamente
 
-  Scenario: Exibição dos materiais "Plástico", "Papel", "Borracha", "Construção civil" e "Óleo de cozinha" como "Coleta seletiva" nos cards
-    Given que estou na página "Home"
-    When os cards dos pontos de coleta são exibidos
-    Then os materiais "Plástico", "Papel" e "Borracha" devem aparecer como "Coleta seletiva"
-
-   Scenario: Exibição dos demais materiais com o próprio nome nos cards
-    Given que estou na página "Home"
-    When os cards dos pontos de coleta são exibidos
-    Then os materiais "Vidro", "Eletrônicos", "Medicamentos", "Têxtil" e "Embalagens de cosméticos" devem ser exibidos com o nome do próprio material
-
   Scenario: Exibição da mensagem de erro ao selecionar um material não disponível em um ponto de coleta
     Given que estou na página "Home"
     When seleciono um material não disponível em um ponto de coleta
@@ -156,7 +158,8 @@ Feature: Página Home do Connect Eco
 
  Scenario: Verificar a exibição e estilo do botão "Estado"
     Given que estou na página inicial
-    Then um botão para selecionar o Estado deve ser exibido ao lado do texto "Principais Pontos de Coleta"
+    Then um botão para selecionar o Estado deve ser exibido ao lado do texto "Principais Pontos de Coleta" no desktop
+    And um botão para selecionar o Estado deve ser exibido abaixo do texto "Principais Pontos de Coleta" no dispositivo móvel
     And o botão "Estado" deve ter a cor verde
     And o texto do botão deve ser em branco
     
@@ -185,7 +188,8 @@ Feature: Página Home do Connect Eco
 
   Scenario: Verificar a exibição e estilo do botão "Cidade"
     Given que estou na página inicial
-    Then um botão para selecionar a Cidade deve ser exibido ao lado do botão "Estado"
+    Then um botão para selecionar a Cidade deve ser exibido ao lado do botão "Estado" no desktop
+    And um botão para selecionar a Cidade deve ser exibido abaixo do botão "Estado" no dispositivo móvel
     And o botão "Cidade" deve ter a cor verde
     And o texto do botão deve ser em branco
 
@@ -215,7 +219,8 @@ Feature: Página Home do Connect Eco
 
  Scenario: Verificar a exibição e estilo do botão "Bairro"
     Given que estou na página inicial
-    And o botão "Bairro" está visível ao lado do botão "Cidade"
+    And o botão "Bairro" está visível ao lado do botão "Cidade" no desktop
+    And o botão "Bairro" está visível abaixo do botão "Cidade" no dispositivo móvel
     Then o botão "Bairro" deve ter a cor branca
     And o placeholder do botão "Bairro" deve conter o texto "Selecione Bairro" na cor cinza quando inativo
     And o placeholder do botão "Bairro" deve conter o texto "Selecione Bairro" na cor preta quando ativo
@@ -256,19 +261,25 @@ Feature: Página Home do Connect Eco
     When o usuário clica no texto "Como chegar"
     Then o usuário deve ser redirecionado para uma página do Google Maps com a localização do ponto de coleta
 
-  Scenario: Exibir no máximo 12 cards por página
-    Given que os pontos de coleta são exibidos na página
+  Scenario: Exibir no máximo 12 cards por página no desktop
+    Given que os pontos de coleta são exibidos na página no desktop
     Then no máximo 12 cards devem ser exibidos por página
 
+  Scenario: Exibir no máximo 3 cards por página no dispositivo móvel
+    Given que os pontos de coleta são exibidos na página no dispositivo móvel
+    Then no máximo 3 cards devem ser exibidos por página
+
   Scenario: Alternar páginas clicando nos números
-    Given que há mais de 12 cards de pontos de coleta exibidos na página
+    Given que há mais de 12 cards de pontos de coleta exibidos na página no desktop
+    And que há mais de 3 cards de pontos de coleta exibidos na página no dispositivo móvel
     And uma caixa de seleção para alternar páginas é exibida com números de páginas
     When o usuário clica em um número de página na caixa de seleção
     Then os cards de pontos de coleta correspondentes à página selecionada devem ser exibidos
     And o número da página selecionada deve aparecer na cor verde
 
 Scenario: Alternar páginas clicando nas setas da caixa de seleção
-    Given que há mais de 12 cards de pontos de coleta exibidos na página
+    Given que há mais de 12 cards de pontos de coleta exibidos na página no desktop
+    And que há mais de 3 cards de pontos de coleta exibidos na página no dispositivo móvel
     And uma caixa de seleção para alternar páginas é exibida com setas para navegação
     When o usuário clica na seta para a próxima página na caixa de seleção
     Then os cards de pontos de coleta correspondentes à próxima página devem ser exibidos
