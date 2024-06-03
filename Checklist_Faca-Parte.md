@@ -7,6 +7,6 @@ Scenario: Exibição da mensagem de página em construção PASSED
 
 Scenario: Voltar para página "Home" PASSED
 #### Teste realizado em:
-Navegador Chrome Versão 124.0.6367.207 (Versão oficial) 64 bits
+Navegador Google Chrome
 
-Resolução: 1920x1080 e 360x800
+Resoluções 1920x1080 e 360x800
