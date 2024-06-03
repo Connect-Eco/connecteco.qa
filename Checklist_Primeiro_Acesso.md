@@ -16,4 +16,4 @@ Scenario: Ação ao clicar no botão "Obter Localização" após bloquear a loca
 
   Navegador Chrome Versão 125.0.6422.113
   
-  Resolução: 1920x1080 e 320x800
+  Resolução: 1920x1080 e 360x800
