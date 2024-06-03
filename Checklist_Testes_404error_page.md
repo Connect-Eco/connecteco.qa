@@ -8,7 +8,6 @@
  Scenario: Ação ao clicar no botão "Voltar para página inicial" PASSED
 
 #### Teste Realizado em:
-  Navegador Chrome Versão 125.0.6422.113
+Navegador Google Chrome
 
-  Resolução: 1920x1080
-    Resolução: 360x800
+Resoluções 1920x1080 e 360x800
