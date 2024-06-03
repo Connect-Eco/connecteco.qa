@@ -106,6 +106,6 @@ Scenario: Alternar páginas clicando nos números PASSED
 Scenario: Alternar páginas clicando nas setas da caixa de seleção PASSED
 
 #### Teste Realizado em:
-Navegador Chrome Versão 125.0.6422.113
+Navegador Google Chrome
 
-Resolução: 1920x1080 e 360x800
+Resoluções 1920x1080 e 360x800
