@@ -13,7 +13,6 @@ Scenario: Ação ao clicar em "Bloquear" e "Ok" no pop-up "Conhecer a sua locali
 Scenario: Ação ao clicar no botão "Obter Localização" após bloquear a localização PASSED
 
 #### Teste Realizado em:
+Navegador Google Chrome
 
-  Navegador Chrome Versão 125.0.6422.113
-  
-  Resolução: 1920x1080 e 360x800
+Resoluções 1920x1080 e 360x800
