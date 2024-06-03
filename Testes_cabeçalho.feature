@@ -37,7 +37,13 @@ Feature: Exibição do cabeçalho no Connect Eco
     And uma localização foi selecionado
     Then a localização atual deve ser exibida no cabeçalho
 
-  Scenario: Pop-up de endereço é exibido ao clicar na localização atual
-    Given que a localização atual está exibida
-    When clico na localização atual
-    Then o pop-up de endereço deve ser exibido
+  Scenario: Verificar elementos do cabeçalho na versão mobile
+    Given que estou na versão mobile
+    Then o logo deve aparecer no canto superior esquerdo do cabeçalho
+    And um menu de navegação deve aparecer no canto superior direito do cabeçalho
+
+  Scenario: Abrir o menu de navegação na versão mobile
+    Given que estou na versão mobile
+    When clico no ícone de lista no menu de navegação
+    Then as opções "Home", "Sobre a Connect Eco", "Blog", o botão "Faça parte" e a localização devem ser exibidos
+
