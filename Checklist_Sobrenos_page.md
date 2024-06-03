@@ -5,7 +5,7 @@ Scenario: Exibição dos textos na página "Sobre a Connect Eco" PASSED
 
 Scenario: Exibição dos integrantes na página "Sobre a Connect Eco" PASSED
 
-Menu suspenso de páginas "mobile" FAILED
+Menu suspenso de páginas "mobile" FAILED https://github.com/Connect-Eco/connecteco/issues/37
 
 #### Teste Realizado em:
   Navegador Chrome Versão 125.0.6422.113
