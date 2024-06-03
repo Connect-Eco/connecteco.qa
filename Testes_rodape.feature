@@ -6,8 +6,14 @@ Feature: Rodapé do Connect Eco
 
   Scenario: Exibição do texto no centro do rodapé
     Given que estou na página do Connect Eco
-    Then no rodapé no centro deve estar escrito "Todos os direitos reservados" em cinza
+    Then no rodapé no centro deve estar escrito "©2024 ConnectEco" em preto
 
   Scenario: Exibição do texto no lado direito do rodapé
     Given que estou na página do Connect Eco
-    Then no rodapé do lado direito deve estar escrito "Políticas de Privacidade" em cinza
+    Then no rodapé do lado direito deve estar escrito "Políticas de Privacidade" em preto
+
+  Scenario: Texto clicável no lado direito do rodapé
+      Given que estou na página do Connect Eco
+      Then no rodapé do lado direito deve ter texto "Políticas de Privacidade" em preto
+      Then clicar no texto
+      When leva a respectiva página

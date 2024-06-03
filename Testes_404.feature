@@ -9,6 +9,6 @@ Feature: 404 - Página Não Encontrada
     Then o botão "Voltar para página inicial" deve ser exibido na cor verde com o texto em branco abaixo da mensagem
 
   Scenario: Ação ao clicar no botão "Voltar para página inicial"
-    Given que a mensagem "404 :(" está exibida
+    Given que a mensagem "404 :(", com a legenda "Ops! Página não encontrada" em cinza deve ser exibida
     When clico no botão "Voltar para página inicial"
-    Then o usuário deve ser direcionado para a página "Home"
+    Then o usuário deve ser direcionado para a página "Home" completa
