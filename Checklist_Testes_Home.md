@@ -57,7 +57,7 @@ Scenario: Seleção de apenas um material PASSED
 
 Scenario: Não é possível a seleção de mais de um material PASSED
 
-Scenario: Exibição automática dos cards dos pontos de coleta ao selecionar um material PASSED
+Scenario: Exibição automática dos cards dos pontos de coleta ao selecionar um material FAILED - https://github.com/Connect-Eco/connecteco/issues/38
 
 Scenario: Exibição da mensagem de erro ao selecionar um material não disponível em um ponto de coleta PASSED
 
@@ -97,7 +97,7 @@ Scenario: Exibir detalhes dos pontos de coleta no card PASSED
 
 Scenario: Link clicável "Como chegar" PASSED
 
-Scenario: Exibir no máximo 12 cards por página PASSED
+Scenario: Exibir no máximo 12 cards por página no desktop PASSED
 
 Scenario: Exibir no máximo 3 cards por página no dispositivo móvel PASSED
 
@@ -106,10 +106,6 @@ Scenario: Alternar páginas clicando nos números PASSED
 Scenario: Alternar páginas clicando nas setas da caixa de seleção PASSED
 
 #### Teste Realizado em:
-  - Navegador Chrome Versão 125.0.6422.113
+Navegador Chrome Versão 125.0.6422.113
 
-  Resolução: 1920x1080
-
-  - Dispositivo móvel
-  
-  Resolução: 360x800
+Resolução: 1920x1080 e 360x800
