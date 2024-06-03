@@ -5,10 +5,7 @@ Teste Realizado em:
 Feature: Página Home do Connect Eco
 
 Scenario: Página Home é aberta por padrão PASSED
-Scenario: Exibição do pop-up "Endereço" no primeiro acesso ao Connect Eco
-Scenario: Pop-up "Endereço" não é exibido se a localização já foi definida PASSED
 Scenario: Elementos exibidos ao clicar em "Home" PASSED
-Scenario: Exibição do banner abaixo do anúncio PASSED
 Scenario: Exibição de cinco banners com duração de 6 segundos cada PASSED
 Scenario: Verificar a exibição do primeiro banner FAILED
 Scenario: Verificar a exibição do segundo banner FAILED
@@ -21,18 +18,26 @@ Scenario: Materiais disponíveis para descarte PASSED
 Scenario: Seleção padrão de todos os materiais PASSED
 Scenario: Exibição da opção selecionada PASSED
 Scenario: Exibição das opções não selecionadas PASSED
-Scenario: Seleção de material "Plásticos" PASSED
+Scenario: Seleção de material "Plástico" PASSED
 Scenario: Seleção de material "Papel" PASSED
+Scenario: Seleção de material "Cápsulas de café" PASSED
+Scenario: Seleção de material "Borracha" PASSED
 Scenario: Seleção de material "Vidro" PASSED
 Scenario: Seleção de material "Eletrônicos" PASSED
-Scenario: Seleção de material "Metais" PASSED
 Scenario: Seleção de material "Medicamentos" PASSED
-Scenario: Seleção de material "Têxtil" FAILED
+Scenario: Seleção de material "Têxtil" PASSED
+Scenario: Seleção de material "Construção civil" PASSED
+Scenario: Seleção de material "Óleo de cozinha" PASSED
+Scenario: Seleção de material "Embalagens de cosméticos" PASSED
 Scenario: Seleção de apenas um material PASSED
 Scenario: Seleção de mais de um material PASSED
+Scenario: Exibição automática dos cards dos pontos de coleta ao selecionar um material PASSED
+Scenario: Exibição dos materiais "Plástico", "Papel", "Borracha", "Construção civil" e "Óleo de cozinha" como "Coleta seletiva" nos cards FAILED
+Scenario: Exibição dos demais materiais com o próprio nome nos cards FAILED
+Scenario: Exibição da mensagem de erro ao selecionar um material não disponível em um ponto de coleta PASSED
 Scenario: Exibição do texto "Principais Pontos de Coleta" PASSED
 Scenario: Verificar a exibição e estilo do botão "Estado" PASSED
-Scenario: Ação ao clicar no botão "Estado" PASSED
+Scenario: Ação ao clicar no botão "Estado" FAILED
 Scenario: Verificar a impossibilidade de selecionar mais de um estado por vez PASSED
 Scenario: Verificar que a seleção de "Estado" desativa "Cidade" e "Bairro" PASSED
 Scenario: Exibir todos os pontos de coleta ao selecionar Estado sem selecionar Cidade e Bairro PASSED
@@ -44,11 +49,10 @@ Scenario: Exibir os pontos de coleta ao selecionar Estado e Cidade sem seleciona
 Scenario: Verificar a exibição e estilo do botão "Bairro" PASSED
 Scenario: Ação ao clicar no botão "Bairro" PASSED
 Scenario: Verificar a impossibilidade de selecionar mais de um bairro por vez PASSED
-Scenario: Exibição de postos de coletas PASSED
-Scenario: Manter informações de endereço após recarregar a página home PASSED
+Scenario: Exibição dos cards dos pontos de coletas abaixo dos botões "Estado", "Cidade" e "Bairro" PASSED
 Scenario: Separar pontos de coleta em cards com imagem e informações PASSED
 Scenario: Exibir detalhes dos pontos de coleta no card PASSED
-Scenario: Link clicável "Como chegar"
+Scenario: Link clicável "Como chegar" PASSED
 Scenario: Exibir no máximo 12 cards por página PASSED
 Scenario: Alternar páginas clicando nos números PASSED
 Scenario: Alternar páginas clicando nas setas da caixa de seleção PASSED
