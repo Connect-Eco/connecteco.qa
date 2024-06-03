@@ -4,7 +4,7 @@ Scenario: Exibição do pop-up "Conhecer a sua localização" no primeiro acesso
 
 Scenario: Ação do botão "Permitir" no pop-up "Conhecer a sua localização" PASSED
 
-Scenario: Ação ao clicar na localização exibida no canto superior esquerdo após permitir o acesso PASSED
+Scenario: Ação ao clicar na localização exibida no canto superior direito após permitir o acesso PASSED
 
 Scenario: Ação do botão "Bloquear" no pop-up "Conhecer a sua localização" PASSED 
 
@@ -16,4 +16,4 @@ Scenario: Ação ao clicar no botão "Obter Localização" após bloquear a loca
 
   Navegador Chrome Versão 125.0.6422.113
   
-  Resolução: 1920x1080
+  Resolução: 1920x1080 e 320x800
