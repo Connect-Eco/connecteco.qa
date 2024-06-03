@@ -6,4 +6,4 @@ Feature: 404 - Página Não Encontrada
 
    Scenario: Exibição da mensagem "404 :(" PASSED
    Scenario: Exibição do botão "Voltar para página inicial" PASSED
-   Scenario: Ação ao clicar no botão "Voltar para página inicial" FAILED
+   Scenario: Ação ao clicar no botão "Voltar para página inicial" PASSED
