@@ -1,6 +1,6 @@
 
 
-### Feature: Página "Sobre a Connect Eco"
+## Feature: Página "Sobre a Connect Eco"
 Scenario: Exibição dos textos na página "Sobre a Connect Eco" PASSED
 
 Scenario: Exibição dos integrantes na página "Sobre a Connect Eco" PASSED
