@@ -125,7 +125,7 @@ Feature: Página Home do Connect Eco
     When seleciono um material
     Then deve ser possível selecionar apenas um material
 
-  Scenario: Seleção de mais de um material
+  Scenario: Não é possível a seleção de mais de um material
     Given que estou na página "Home"
     When seleciono mais de um material
     Then deve ser impossível selecionar mais de um material
