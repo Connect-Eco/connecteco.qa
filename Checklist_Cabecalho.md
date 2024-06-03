@@ -21,3 +21,4 @@
   Navegador Chrome Versão 125.0.6422.141 
   
   Resolução: 1920x1080
+  Resolução: 360x800 (dispositivo móvel)
