@@ -8,7 +8,6 @@ Scenario: Exibição dos integrantes na página "Sobre a Connect Eco" PASSED
 Menu suspenso de páginas "mobile" FAILED https://github.com/Connect-Eco/connecteco/issues/37
 
 #### Teste Realizado em:
-  Navegador Chrome Versão 125.0.6422.113
-  
-  Resolução: 1920x1080
-  Resolução: 360x800
+Navegador Google Chrome
+
+Resoluções 1920x1080 e 360x800
