@@ -8,3 +8,8 @@ Feature: Página "Sobre a Connect Eco"
        Given estou abaixo dos textos "Missão", "Visão", "Valores" e "Como nasceu"
         Then observa-se carrossel com informaçòes de cada membro
         Then sob as informações dois botões verde escuro com texto branco clicáveis "LinkedIn" "GitHub" respectivamente
+
+
+    Scenario: Menu suspenso de páginas "mobile"
+         Given Seleciono a página "Sobre a Connect Eco" no menu suspenso canto superor direito
+         Then A página carrega e o menu some da tela
