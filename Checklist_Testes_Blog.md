@@ -14,4 +14,4 @@
 #### Testes Realizado em:
   Navegador Chrome Versão 125.0.6422.113 
   
-  Resolução: 1920x1080
+  Resolução: 1920x1080 e 360x800
