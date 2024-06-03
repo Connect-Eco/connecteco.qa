@@ -51,7 +51,7 @@ Scenario: Seleção de material "Embalagens de cosméticos" PASSED
 
 Scenario: Seleção de apenas um material PASSED
 
-Scenario: Não é possível à seleção de mais de um material PASSED
+Scenario: Não é possível a seleção de mais de um material PASSED
 
 Scenario: Exibição automática dos cards dos pontos de coleta ao selecionar um material PASSED
 
