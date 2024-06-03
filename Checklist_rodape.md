@@ -3,7 +3,7 @@
 
  Scenario: Exibição do texto no centro do rodapé PASSED
 
- Scenario: Exibição do texto no lado direito do rodapé FAILED
+ Scenario: Exibição do texto no lado direito do rodapé FAILED - https://github.com/Connect-Eco/connecteco/issues/32
 
  Scenario: Texto clicável no lado direito do rodapé PASSED
 #### Teste Realizado em:
