@@ -1,5 +1,5 @@
 Testes Realizados em:
-  Navegador Chrome Versão 125.0.6422.113 
+  Navegador Chrome Versão 125.0.6422.141 
   Resolução: 1920x1080
 
 Feature: Exibição do cabeçalho no Connect Eco
