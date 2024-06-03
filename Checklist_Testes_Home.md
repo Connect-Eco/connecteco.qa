@@ -23,9 +23,13 @@ Scenario: Materiais disponíveis para descarte PASSED
 
 Scenario: Seleção padrão de todos os materiais PASSED
 
-Scenario: Exibição da opção selecionada PASSED
+Scenario: Exibição dos materiais no desktop PASSED
 
-Scenario: Exibição das opções não selecionadas PASSED
+Scenario: Exibir materiais em uma caixa de seleção no mobile PASSED
+
+Scenario: Material selecionado em azul na caixa de seleção PASSED
+
+Scenario: Material exibido em verde após seleção PASSED
 
 Scenario: Seleção de material "Plástico" PASSED
 
@@ -54,10 +58,6 @@ Scenario: Seleção de apenas um material PASSED
 Scenario: Não é possível a seleção de mais de um material PASSED
 
 Scenario: Exibição automática dos cards dos pontos de coleta ao selecionar um material PASSED
-
-Scenario: Exibição dos materiais "Plástico", "Papel", "Borracha", "Construção civil" e "Óleo de cozinha" como "Coleta seletiva" nos cards FAILED
-
-Scenario: Exibição dos demais materiais com o próprio nome nos cards FAILED
 
 Scenario: Exibição da mensagem de erro ao selecionar um material não disponível em um ponto de coleta PASSED
 
@@ -99,11 +99,17 @@ Scenario: Link clicável "Como chegar" PASSED
 
 Scenario: Exibir no máximo 12 cards por página PASSED
 
+Scenario: Exibir no máximo 3 cards por página no dispositivo móvel PASSED
+
 Scenario: Alternar páginas clicando nos números PASSED
 
 Scenario: Alternar páginas clicando nas setas da caixa de seleção PASSED
 
 #### Teste Realizado em:
-  Navegador Chrome Versão 125.0.6422.113
+  - Navegador Chrome Versão 125.0.6422.113
 
   Resolução: 1920x1080
+
+  - Dispositivo móvel
+  
+  Resolução: 360x800
