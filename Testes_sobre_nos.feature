@@ -7,4 +7,4 @@ Feature: Página "Sobre a Connect Eco"
     Scenario: Exibição dos integrantes na página "Sobre a Connect Eco"
        Given estou abaixo dos textos "Missão", "Visão", "Valores" e "Como nasceu"
         Then observa-se carrossel com informaçòes de cada membro
-        Then sob as informações dois botões verde escuro com texto branco clicáveis "LinkedIn" "GitHub" respectivamente.
+        Then sob as informações dois botões verde escuro com texto branco clicáveis "LinkedIn" "GitHub" respectivamente
