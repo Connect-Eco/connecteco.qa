@@ -1,6 +1,6 @@
 ## Feature: Página "Blog" do Connect Eco
 
-  Scenario: Exibição das publicações na seção "Últimos posts" FAILED -  https://github.com/Connect-Eco/connecteco/issues/34  
+  Scenario: Exibição das publicações PASSED
   
   Scenario: Exibição do botão "Visualizar" nas publicações PASSED
   
