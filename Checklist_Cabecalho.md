@@ -18,4 +18,4 @@ Feature: Exibição do cabeçalho no Connect Eco
   
   Scenario: A localização atual é exibida corretamente PASSED
   
-  Scenario: O pop-up de endereço é exibido ao clicar na localização atual FAILED  https://github.com/Connect-Eco/connecteco/issues/33
+  Scenario: O pop-up de endereço é exibido ao clicar na localização atual FAILED  - https://github.com/Connect-Eco/connecteco/issues/33
