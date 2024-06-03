@@ -17,8 +17,6 @@
   Scenario: O pop-up de endereço é exibido ao clicar na localização atual FAILED  - https://github.com/Connect-Eco/connecteco/issues/33
 
   #### Testes Realizados em:
+Navegador Google Chrome
 
-  Navegador Chrome Versão 125.0.6422.141 
-  
-  Resolução: 1920x1080
-  Resolução: 360x800 (dispositivo móvel)
+Resoluções 1920x1080 e 360x800
