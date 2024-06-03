@@ -1,8 +1,4 @@
-Testes Realizado em:
-  Navegador Chrome Versão 125.0.6422.113 
-  Resolução: 1920x1080
-
-Feature: Página "Blog" do Connect Eco
+## Feature: Página "Blog" do Connect Eco
 
   Scenario: Exibição das publicações na seção "Últimos posts" FAILED -  https://github.com/Connect-Eco/connecteco/issues/34  
   
@@ -13,3 +9,9 @@ Feature: Página "Blog" do Connect Eco
   Scenario: Exibição do post mais recente em tamanho maior PASSED
   
   Scenario: Ação ao clicar no botão "Visualizar" PASSED
+
+
+#### Testes Realizado em:
+  Navegador Chrome Versão 125.0.6422.113 
+  
+  Resolução: 1920x1080
