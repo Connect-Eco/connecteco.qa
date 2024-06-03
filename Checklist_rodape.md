@@ -7,7 +7,6 @@
 
  Scenario: Texto clicável no lado direito do rodapé PASSED
 #### Teste Realizado em:
-  Navegador Chrome Versão 125.0.6422.113
+Navegador Google Chrome
 
-  Resolução: 1920x1080
-    Resolução: 360x800
+Resoluções 1920x1080 e 360x800
