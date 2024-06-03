@@ -5,9 +5,9 @@ Scenario: Elementos exibidos ao clicar em "Home" PASSED
 
 Scenario: Exibição de cinco banners com duração de 6 segundos cada PASSED
 
-Scenario: Verificar a exibição do primeiro banner FAILED
+Scenario: Verificar a exibição do primeiro banner FAILED - https://github.com/Connect-Eco/connecteco/issues/29
 
-Scenario: Verificar a exibição do segundo banner FAILED
+Scenario: Verificar a exibição do segundo banner FAILED - https://github.com/Connect-Eco/connecteco/issues/30
 
 Scenario: Verificar a exibição do terceiro banner PASSED
 
@@ -65,7 +65,7 @@ Scenario: Exibição do texto "Principais Pontos de Coleta" PASSED
   
 Scenario: Verificar a exibição e estilo do botão "Estado" PASSED
 
-Scenario: Ação ao clicar no botão "Estado" FAILED
+Scenario: Ação ao clicar no botão "Estado" FAILED - https://github.com/Connect-Eco/connecteco/issues/31
 
 Scenario: Verificar a impossibilidade de selecionar mais de um estado por vez PASSED
 
