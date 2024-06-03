@@ -4,7 +4,7 @@ Testes Realizados em:
   
   Resolução: 1920x1080
 
-Feature: Exibição do cabeçalho no Connect Eco
+## Feature: Exibição do cabeçalho no Connect Eco
 
   Scenario: O cabeçalho é exibido ao acessar o Connect Eco PASSED
   
